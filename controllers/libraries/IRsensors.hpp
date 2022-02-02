@@ -22,10 +22,32 @@ class IRsensor
 {
     private:
     public:
+
+    //vetores que armazenam os valores max e min para o calibrate:
+        double max[20];
+        double min[20];
+
+    
 }
 //ANTES DA CORRIDA
     //Calibrar Sensores
+    void CALIBRATE(){
+        while (robot->step(TIMESTEP) != -1){
 
+            double time = robot->getTime();
+
+            while (time < 11){
+                robot->(TIMESTEP);
+                right_sensor.calibrateSensors(time);
+                left_right_sensor.calibrateSensors(time);
+                left_left_sensor.calibrateSensors(time);
+                frontal_sensor.calibrateSensors(time);
+
+                time = robot->getTime();
+            }
+            cout << "Fim da calibracao" << endl;
+        }
+    }
     //Ler valores calibrados
 //DURANTE A CORRIDA
     //Qual a posição do Robô?
