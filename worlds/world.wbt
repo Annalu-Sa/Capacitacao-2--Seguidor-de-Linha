@@ -1,12 +1,12 @@
-#VRML_SIM R2021a utf8
+#VRML_SIM R2021b utf8
 WorldInfo {
   basicTimeStep 20
   FPS 10
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.5540655242213175 -0.6204635272223538 -0.5550102758113153 4.250727711652306
-  position 0.5237052041513449 2.692435321533111 -0.0463216945143261
+  orientation 0.42542791299782834 -0.8298435982910922 -0.3610688206112577 4.689899782110725
+  position 2.2327193045208777 1.7044856907812365 -0.08946627518129718
 }
 TexturedBackground {
 }
@@ -17,8 +17,8 @@ RectangleArena {
   floorAppearance NULL
 }
 DEF Presto Robot {
-  translation 0.708016 0.00523076 -0.0777989
-  rotation -0.9673617857081064 -0.16033996448117435 -0.19621995653296762 0.0182884
+  translation 0.707961175247779 0.009283074633913082 -0.07755502980794643
+  rotation 0.8113813562531588 -0.5559688259936917 0.18044101320924977 0.005146968599051141
   children [
     DEF GROUN_SENSOR_SLOT Transform {
       translation 0 -0.005 0
@@ -138,7 +138,7 @@ DEF Presto Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position -1846.4527945338846
+        position -1846.4506335096132
         anchor -0.092 0.0010500000000000058 0.106999
       }
       device [
@@ -154,8 +154,8 @@ DEF Presto Robot {
         }
       ]
       endPoint Solid {
-        translation -0.09319886006580363 0.0008924881654730426 0.10719959245070688
-        rotation 0.4495566158927438 -0.43772142311564666 0.7786519150767415 1.802331398763827
+        translation -0.09319886006580363 0.0008920550484478412 0.10719925159568859
+        rotation 0.4502385282739318 -0.43839385131844977 0.7778792314902749 1.8033036385538697
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
@@ -176,11 +176,13 @@ DEF Presto Robot {
           density -1
           mass 5
         }
+        linearVelocity 1.153473889106458e-09 -6.658113762504867e-07 4.795125402929703e-07
+        angularVelocity 3.9988194918940496e-05 2.346912254078838e-08 -6.51860408936929e-08
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position -1411.0044939806514
+        position -1411.0041672651332
         anchor 0.0767 0.0010500000000000008 0.107002
       }
       device [
@@ -196,8 +198,8 @@ DEF Presto Robot {
         }
       ]
       endPoint Solid {
-        translation 0.07500122591950525 0.0011573647743666118 0.10710319767387856
-        rotation -0.35372891810686546 -0.37359982435983197 -0.8574957864230291 1.6673009471580982
+        translation 0.07500122591950525 0.0011573317057865168 0.10710323274621476
+        rotation -0.35359915311065165 -0.37347933078508444 -0.8576017889415549 1.66718539962865
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
@@ -213,6 +215,8 @@ DEF Presto Robot {
         name "solid(1)"
         boundingObject USE wheel
         physics USE physics_wheel
+        linearVelocity 1.1437633856730697e-09 -6.915040980883119e-07 4.959111363692782e-07
+        angularVelocity 3.9815645820107364e-05 2.371918341859067e-08 -6.568222290730535e-08
       }
     }
     DEF Terceiro_Apoio Solid {
@@ -254,6 +258,8 @@ DEF Presto Robot {
   }
   controller "my_controller"
   supervisor TRUE
+  linearVelocity -1.0785131041915417e-09 3.149881373971659e-06 3.5160939274839196e-07
+  angularVelocity 3.9958845023493425e-05 2.347369347072931e-08 -6.525101637890063e-08
 }
 Solid {
   translation 0.18 -4.26331e-07 4.26331e-07
